@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<?php // Recibe la información del formulario
+<?php 
  
 function insert_inputs()
   {
@@ -36,7 +36,7 @@ function insert_inputs()
         $rows[] = $data;
       }
  
-      unset($rows[0]); // se eliminan las cabeceras
+      unset($rows[0]);
       $total = count($rows);
        
       if ($total <= 0) {
@@ -52,11 +52,10 @@ function insert_inputs()
           'creado'      => $r[2],
           'actualizado' => $r[3],
         ];
-
-
         echo "$r[0]";
- 
- 
+        echo "$r[1]";
+        echo "$r[2]";
+        echo "$r[3]"; 
       }
       if($data == null) {
         echo '<script language="javascript">alert("No envio datos");</script>';
